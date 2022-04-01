@@ -16,6 +16,16 @@
     justify-content: center;
     flex-direction: column;
 
+    @media only screen and(max-height: 650px) and (min-width: 900px) {
+      overflow-y: scroll;
+      justify-content: flex-start;
+      padding: 2rem 0;
+    }
+
+    img {
+      width: 20rem;
+    }
+
     @include respond(tab-port) {
       flex-direction: row;
       padding: 2rem;
@@ -147,8 +157,17 @@
       font-size: 2rem;
       color: $color-secondary;
       background-color: $color-accent;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      text-decoration: none;
       padding: 1.5rem;
       display: inline-block;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba($color-accent, 0.7);
+      }
     }
   }
 }

@@ -22,7 +22,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <title>Culture Bee SHop - Coming Soon</title>
+    <title>Culture Bee Shop - Coming Soon</title>
   </head>
   <body>
     <header class="header">
@@ -35,13 +35,27 @@
             class="image u-margin-bottom-small"
           />
           <h1 class="heading-primary">Coming Soon</h1>
-          <p class="paragraph">Join the waitlist as the culture is crafted!</p>
+          <p class="paragraph">Join The Waitlist As The Culture Is Crafted!</p>
         </div>
 
-        <form class="cta">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <button class="btn">Join</button>
+        <form
+          class="cta"
+          action="http://localhost/culturebee/subscribe.php"
+          method="POST"
+        >
+          <input
+            type="text"
+            placeholder="Enter your Name"
+            required
+            name="name"
+          />
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            required
+            name="email"
+          />
+          <button class="btn" name="sub-sumbit">Join</button>
         </form>
       </div>
       <div class="swiper mySwiper">
@@ -57,14 +71,6 @@
           <div class="swiper-slide">
             <img
               src="images/img2.jpg"
-              alt="Culture Bee Showcase"
-              draggable="false"
-            />
-            <div class="overlay"></div>
-          </div>
-          <div class="swiper-slide">
-            <img
-              src="images/img3.jpg"
               alt="Culture Bee Showcase"
               draggable="false"
             />
@@ -105,10 +111,8 @@
 
       <div class="socials">
         <a href="https://www.instagram.com/culturebeeshop/" class="link"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="#" class="link"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="link"><i class="fab fa-facebook-f"></i></a>
+          ><i class="fab fa-instagram"></i> <span>Instagram</span></a
+        >
       </div>
     </header>
 
